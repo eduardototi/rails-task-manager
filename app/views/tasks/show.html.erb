@@ -1,0 +1,13 @@
+<div class="container-show">
+  <div class="title-show">
+    <%= @task.title %>
+  </div>
+    <div class="complete-show">
+    <% if @task.complete %>
+      [x]
+    <% else %>
+      [ ]
+    <% end %>
+    <%= @task.detail %>
+  </div>
+</div>

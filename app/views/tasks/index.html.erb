@@ -1,0 +1,20 @@
+<ul class="container">
+  <% @tasks.each do |task| %>
+        <li class="card-category">
+          <div class="title">
+            <p>Task: <%= task.title %></p>
+          </div>
+          <div class="text">
+            <% if task.complete %>
+              <p>[x] - Task completed </p>
+            <% else  %>
+              <p>[ ] - Task not completed </p>
+            <% end  %>
+          </div>
+            <%= link_to 'Edit', edit_path(task) %>
+            <%= link_to 'Delete', destroy_path(task), method: :delete %>
+            <%= link_to 'Show', show_path(task) %>
+        </li>
+    <% end %>
+</ul>
+
